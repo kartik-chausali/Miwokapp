@@ -1,0 +1,2 @@
+rootProject.name = "Miwok-App-master"
+include ':app'

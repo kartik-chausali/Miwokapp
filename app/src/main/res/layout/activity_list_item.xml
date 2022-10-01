@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".list_item">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:orientation="horizontal"
+        android:minHeight="@dimen/list_item_height"
+        android:background="@color/tan_background">
+
+        <ImageView
+            android:layout_width="@dimen/list_item_height"
+            android:layout_height="@dimen/list_item_height"
+            android:id="@+id/image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/image"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:id="@+id/text_Container"
+
+            >
+
+
+            //tools:text is an design time attribute in tools namespace in android , they help us
+            when we"re developing code
+            // but won't acctually show we app is running
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                tools:text="lutti"
+                android:id="@+id/miwok_text_view"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                tools:text="one"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:id="@+id/default_text_view"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/baseline_not_started_white_24" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
